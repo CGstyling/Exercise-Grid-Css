@@ -1,1 +1,62 @@
-/*Maak hier jouw CSS!*/
+
+.container {
+    background-color: #F5D6BA;
+    color: #fff;
+    padding: 16px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 240px 100px auto 50px;
+    grid-template-areas:
+            "header asidec asidec"
+            "article asidec asidec"
+            "article small-article asided"
+            "article small-article . "
+            "footer footer footer";
+}
+
+#itema {
+    background-color: #A40E4C;
+    grid-area: header;
+}
+
+#itemb {
+    background-color: #2C2C54;
+    grid-area: article;
+}
+
+#itemc {
+    background-color: #ACC3A6;
+    grid-area: asidec;
+}
+
+#itemd {
+    background-color: #E8FFB7;
+    grid-area: asided;
+}
+
+#iteme {
+    background-color: #F49D6E;
+    grid-area: small-article;
+}
+
+#itemf {
+    background-color: #E2A0FF;
+    grid-area: footer;
+}
+
+@media screen and (max-width: 576px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px auto 50px 50px 50px 50px 50px;
+        grid-template-areas:
+        "header"
+        "article"
+        "asidec"
+        "asided"
+        "small-article"
+        " . "
+        "footer";
+    }
+}
